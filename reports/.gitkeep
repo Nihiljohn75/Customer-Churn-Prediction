@@ -1,1 +1,38 @@
+# Day 1 Business Insights
 
+## Dataset Summary
+
+- Total Customers: 100,000
+- Churned Customers: 33,144
+- Overall Churn Rate: 33.14%
+
+---
+
+## Data Validation Summary
+
+Completed the following checks:
+
+- Verified total records
+- Checked duplicate Customer IDs
+- Checked NULL values
+- Validated categorical values
+- Analysed numerical columns
+- Identified negative TotalCharges values
+
+---
+
+## Key Business Insights
+
+- Approximately one out of every three customers has churned.
+- Customer retention should be a primary business focus.
+- Further analysis will identify which customer segments contribute most to churn.
+
+---
+
+## Recommendations
+
+- Analyse churn by contract type.
+- Analyse churn by payment method.
+- Analyse churn by tenure.
+- Analyse churn by age group.
+- Build machine learning models to predict customer churn risk.
