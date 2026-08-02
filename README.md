@@ -1,6 +1,6 @@
 # 📊 Customer Churn Prediction
 
-An end-to-end **Data Science Project** to analyse customer churn using **MySQL, Python, Machine Learning, and Tableau**. This project follows an industry-standard workflow, covering database design, data validation, exploratory data analysis, predictive modelling, and business intelligence dashboards.
+An end-to-end Data Science project to analyze customer churn using **MySQL, Python, Machine Learning, and Tableau**. This project follows an industry-standard workflow covering database design, data validation, exploratory data analysis, predictive modeling, and business intelligence dashboards.
 
 ---
 
@@ -8,10 +8,11 @@ An end-to-end **Data Science Project** to analyse customer churn using **MySQL, 
 
 Customer churn is one of the biggest challenges faced by subscription-based businesses. The objective of this project is to:
 
-- Analyse customer behaviour using SQL.
+- Analyze customer behavior using SQL.
 - Perform comprehensive data validation and quality assessment.
-- Explore customer churn patterns through data analysis.
-- Build machine learning models to predict customer churn.
+- Explore customer churn patterns through Exploratory Data Analysis (EDA).
+- Build and compare multiple machine learning models to predict customer churn.
+- Identify the key factors driving customer churn.
 - Develop an interactive Tableau dashboard for business stakeholders.
 - Provide actionable business recommendations to improve customer retention.
 
@@ -20,12 +21,15 @@ Customer churn is one of the biggest challenges faced by subscription-based busi
 # 🌟 Project Highlights
 
 - ✅ End-to-End Data Science Project
-- ✅ SQL Business Analysis
+- ✅ SQL Database Design & Business Analysis
 - ✅ Data Validation & Quality Assessment
 - ✅ Python Data Cleaning Pipeline
 - ✅ Exploratory Data Analysis (EDA)
-- ⏳ Machine Learning Classification Models
-- ⏳ Tableau Interactive Dashboard
+- ✅ Machine Learning Model Development
+- ✅ Hyperparameter Tuning
+- ✅ Feature Importance Analysis
+- ✅ Model Serialization using Pickle
+- ⏳ Tableau Dashboard
 - ⏳ Business Recommendations
 
 ---
@@ -34,60 +38,68 @@ Customer churn is one of the biggest challenges faced by subscription-based busi
 
 | Tool | Purpose |
 |------|---------|
-| MySQL | Database creation, SQL analysis, KPI reporting |
-| Python | Data cleaning, EDA, Machine Learning |
+| MySQL | Database creation, SQL analysis & KPI reporting |
+| Python | Data cleaning, EDA & Machine Learning |
 | Jupyter Notebook | Data analysis & model development |
 | Pandas | Data manipulation |
 | NumPy | Numerical computation |
-| Matplotlib | Data visualisation |
-| Seaborn | Statistical visualisation |
+| Matplotlib | Data visualization |
+| Seaborn | Statistical visualization |
 | Scikit-learn | Machine Learning |
-| Tableau | Business dashboard |
-| Git & GitHub | Version control & project documentation |
+| XGBoost | Gradient Boosting Classification |
+| Tableau | Interactive Dashboard |
+| Pickle | Model Serialization |
+| Git & GitHub | Version Control |
 
 ---
 
 # 📂 Project Structure
 
 ```text
-Customer-Churn-Prediction/
+Customer-Churn-Prediction
 │
-├── data/
-│   ├── raw/
+├── data
+│   ├── raw
 │   │   └── synthetic_customer_churn_100k.csv
 │   │
-│   └── processed/
+│   └── processed
 │       └── customer_churn_cleaned.csv
 │
-├── sql/
+├── sql
 │   ├── 01_database_setup.sql
 │   ├── 02_data_validation.sql
 │   └── 03_business_analysis.sql
 │
-├── notebooks/
-│   └── 01_Data_Cleaning_and_Validation.ipynb
+├── notebooks
+│   ├── 01_Data_Cleaning.ipynb
+│   ├── 02_EDA.ipynb
+│   └── 03_Machine_Learning.ipynb
 │
-├── reports/
+├── models
+│   ├── customer_churn_model.pkl
+│   ├── scaler.pkl
+│   └── label_encoder.pkl
+│
+├── reports
 │   ├── Day1_Business_Insights.md
 │   └── Day2_DataCleaning.md
 │
-├── tableau/
+├── tableau
 │
-├── models/
+├── images
 │
-├── images/
-│
-└── README.md
+├── README.md
+├── requirements.txt
+└── .gitignore
 ```
 
 ---
 
 # 📁 Dataset
 
-**Dataset:** Synthetic Customer Churn Dataset
-
 | Metric | Value |
-|---------|--------|
+|---------|------|
+| Dataset | Synthetic Customer Churn Dataset |
 | Records | 100,000 |
 | Features | 9 |
 | Target Variable | Churn |
@@ -115,211 +127,134 @@ Customer-Churn-Prediction/
 | Duplicate Records | 0 |
 | Negative TotalCharges | 265 (0.27%) |
 | Outliers | Present only in TotalCharges |
-| Data Types | Valid |
-| Dataset Status | Ready for Exploratory Data Analysis |
+| Dataset Status | Ready for Machine Learning |
 
 ---
 
-# 📅 Project Progress
+# 📈 Exploratory Data Analysis
 
-## ✅ Phase 1 – SQL Database & Business Analysis
+EDA included:
 
-### Database Setup
+- Univariate Analysis
+- Bivariate Analysis
+- Correlation Analysis
+- Outlier Analysis
+- Feature Distribution Analysis
+- Churn Pattern Analysis
 
-- Created MySQL database.
-- Created Customers table.
-- Imported 100,000 customer records.
+### Key Findings
 
-### Data Validation
-
-Performed comprehensive validation including:
-
-- Total record verification
-- Duplicate Customer ID check
-- Missing value analysis
-- Data type validation
-- Categorical value validation
-- Numerical summary statistics
-- Investigation of negative TotalCharges
-
-### Business KPI Analysis
-
-Calculated key business metrics including:
-
-- Total Customers
-- Overall Churn Rate
-- Average Monthly Charges
-- Average Total Charges
-- Average Customer Tenure
+- Month-to-month customers showed the highest churn.
+- Customers with shorter tenure were more likely to churn.
+- Higher monthly charges were associated with higher churn.
+- Gender showed minimal influence on churn.
 
 ---
 
-## ✅ Phase 2 – Python Data Cleaning & Validation
+# 🤖 Machine Learning
 
-### Data Import
+## Data Preprocessing
 
-- Connected MySQL with Python.
-- Loaded dataset into Pandas DataFrame.
+- Removed CustomerID
+- One-Hot Encoding
+- Label Encoding
+- Standard Scaling
+- Train-Test Split (80:20)
 
-### Data Quality Assessment
+## Models Evaluated
 
-Performed:
-
-- Dataset shape analysis
-- Data type verification
-- Descriptive statistics
-- Missing value analysis
-- Duplicate record check
-- Negative TotalCharges investigation
-
-### Data Cleaning
-
-- Removed CustomerID (identifier column)
-- Performed outlier analysis
-- Analysed feature distributions
-- Generated correlation matrix
-- Saved cleaned dataset for modelling
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- XGBoost
+- Tuned XGBoost (GridSearchCV)
 
 ---
 
-# 📈 Key Business Findings
+## 📊 Model Performance
 
-## KPI 1 – Total Customers
+| Model | Accuracy | ROC-AUC | F1 Score |
+|--------|----------|----------|----------|
+| Tuned XGBoost | **75.95%** | **0.802** | **0.605** |
+| XGBoost | 75.31% | 0.797 | 0.592 |
+| Random Forest | 73.43% | 0.789 | 0.554 |
+| Logistic Regression | 72.48% | 0.771 | 0.525 |
+| Decision Tree | 68.15% | 0.641 | 0.521 |
 
-- **100,000 Customers**
+### Final Model
 
----
-
-## KPI 2 – Overall Churn Rate
-
-| Metric | Value |
-|---------|--------|
-| Total Customers | 100,000 |
-| Churned Customers | 33,144 |
-| Churn Rate | **33.14%** |
-
-### Business Insight
-
-Approximately **one in every three customers has churned**, indicating a significant customer retention challenge.
-
-Future analysis will focus on identifying high-risk customer segments based on:
-
-- Contract Type
-- Payment Method
-- Customer Tenure
-- Monthly Charges
-- Age Groups
+**Tuned XGBoost** was selected as the final model due to its superior performance across Accuracy, ROC-AUC, F1 Score, and Cross-Validation Accuracy.
 
 ---
 
-# 📊 Data Cleaning Summary
+# 📈 Feature Importance
 
-During Python preprocessing:
+The trained XGBoost model identified the following features as the most influential:
 
-- No missing values were detected.
-- No duplicate records were found.
-- Only **0.27%** of records contained negative TotalCharges.
-- Outliers were observed only in TotalCharges and retained because they represent valid business behaviour.
-- Correlation analysis confirmed expected relationships between numerical variables.
+1. Tenure
+2. Contract (Two Year)
+3. Contract (One Year)
+4. Monthly Charges
+
+These variables account for the majority of the model's predictive power, indicating that customer loyalty and contract commitment are the primary drivers of churn.
+
+---
+
+# 💾 Saved Models
+
+The following artifacts are included for future deployment:
+
+- customer_churn_model.pkl
+- scaler.pkl
+- label_encoder.pkl
 
 ---
 
 # 🚀 Project Roadmap
 
-## ✅ Phase 1 — SQL Database & Business Analysis
-
-- Database Creation
-- Data Validation
-- KPI Analysis
-
----
-
-## ✅ Phase 2 — Data Cleaning & Validation
-
-- Data Import
-- Data Quality Assessment
-- Outlier Analysis
-- Distribution Analysis
-- Correlation Analysis
-
----
-
-## ⏳ Phase 3 — Exploratory Data Analysis
-
-- Univariate Analysis
-- Bivariate Analysis
-- Multivariate Analysis
-- Business Insights
-- Customer Segmentation
-
----
-
-## ⏳ Phase 4 — Machine Learning
-
-- Data Preprocessing
-- Feature Engineering
-- Train/Test Split
-- Classification Models
-- Hyperparameter Tuning
-- Model Evaluation
-
----
-
-## ⏳ Phase 5 — Tableau Dashboard
-
-- Executive Dashboard
-- Churn KPIs
-- Customer Segmentation
-- Interactive Filters
-- Business Dashboard
-
----
-
-## ⏳ Phase 6 — Business Recommendations
-
-- Churn Driver Analysis
-- Customer Retention Strategies
-- Business Recommendations
-- Final Report
-
----
-
-# 📌 Current Status
-
 | Phase | Status |
 |--------|--------|
-| Database Setup | ✅ Completed |
-| Data Validation | ✅ Completed |
-| SQL Business Analysis | ✅ Completed |
-| Python Data Cleaning | ✅ Completed |
-| Exploratory Data Analysis | ⏳ In Progress |
-| Feature Engineering | ⏳ Pending |
-| Machine Learning | ⏳ Pending |
-| Tableau Dashboard | ⏳ Pending |
+| SQL Database & Business Analysis | ✅ Completed |
+| Data Cleaning & Validation | ✅ Completed |
+| Exploratory Data Analysis | ✅ Completed |
+| Feature Engineering | ✅ Completed |
+| Machine Learning | ✅ Completed |
+| Hyperparameter Tuning | ✅ Completed |
+| Tableau Dashboard | ⏳ In Progress |
 | Business Recommendations | ⏳ Pending |
 
 ---
 
-# 📈 Expected Deliverables
+# 📊 Current Status
 
-By the completion of this project, the repository will include:
+| Phase | Status |
+|--------|--------|
+| Database Setup | ✅ Completed |
+| SQL Analysis | ✅ Completed |
+| Data Cleaning | ✅ Completed |
+| Exploratory Data Analysis | ✅ Completed |
+| Machine Learning | ✅ Completed |
+| Model Comparison | ✅ Completed |
+| Hyperparameter Tuning | ✅ Completed |
+| Feature Importance | ✅ Completed |
+| Model Serialization | ✅ Completed |
+| Tableau Dashboard | ⏳ In Progress |
 
-- SQL Business Analysis
-- Data Validation Reports
-- Python Data Cleaning Notebook
-- Exploratory Data Analysis Notebook
-- Machine Learning Models
-- Model Performance Comparison
-- Feature Importance Analysis
-- Tableau Dashboard
-- Business Insights Report
-- Final Recommendations
+---
+
+# 📈 Business Insights
+
+- Approximately **33.14%** of customers have churned.
+- Customer tenure is the strongest predictor of churn.
+- Long-term contracts significantly reduce churn.
+- Monthly charges play an important role in customer retention.
+- Demographic features have relatively little impact compared to behavioral features.
 
 ---
 
 # 📬 Author
 
-## Nihil John Sundar S
+**Nihil John Sundar S**
 
 📍 Chennai, India
 
@@ -333,6 +268,6 @@ By the completion of this project, the repository will include:
 
 # ⭐ Repository Status
 
-This repository documents the complete lifecycle of an end-to-end Customer Churn Prediction project using SQL, Python, Machine Learning, and Tableau.
+This repository documents the complete lifecycle of an end-to-end Customer Churn Prediction project using **SQL, Python, Machine Learning, XGBoost, and Tableau**.
 
-The project is being developed phase by phase, following an industry-standard data science workflow, with each stage documented through code, reports, and business insights.
+The project follows an industry-standard data science workflow and demonstrates database management, data preprocessing, exploratory analysis, predictive modeling, model evaluation, and business intelligence reporting.
