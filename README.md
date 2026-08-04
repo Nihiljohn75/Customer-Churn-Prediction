@@ -1,90 +1,114 @@
 # 📊 Customer Churn Prediction
 
-An end-to-end Data Science project to analyze customer churn using **MySQL, Python, Machine Learning, and Tableau**. This project follows an industry-standard workflow covering database design, data validation, exploratory data analysis, predictive modeling, and business intelligence dashboards.
+> **End-to-End Data Science Project using MySQL, Python, Machine Learning (XGBoost), and Tableau**
+
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange?logo=mysql)
+![Tableau](https://img.shields.io/badge/Tableau-Dashboard-blue?logo=tableau)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-orange?logo=scikit-learn)
+![XGBoost](https://img.shields.io/badge/XGBoost-Gradient%20Boosting-green)
+![License](https://img.shields.io/badge/License-MIT-success)
 
 ---
 
-# 🎯 Project Objective
+## 📌 Project Overview
 
-Customer churn is one of the biggest challenges faced by subscription-based businesses. The objective of this project is to:
+Customer churn is one of the biggest challenges faced by subscription-based businesses.
 
-- Analyze customer behavior using SQL.
-- Perform comprehensive data validation and quality assessment.
-- Explore customer churn patterns through Exploratory Data Analysis (EDA).
-- Build and compare multiple machine learning models to predict customer churn.
-- Identify the key factors driving customer churn.
-- Develop an interactive Tableau dashboard for business stakeholders.
-- Provide actionable business recommendations to improve customer retention.
+This project demonstrates an **industry-standard end-to-end data science workflow**, starting from SQL database creation to Machine Learning model development and Tableau dashboard visualization.
+
+The project combines:
+
+- SQL Business Analysis
+- Data Validation
+- Data Cleaning
+- Exploratory Data Analysis
+- Feature Engineering
+- Machine Learning
+- Hyperparameter Tuning
+- Tableau Dashboard
+- Business Recommendations
 
 ---
 
-# 🌟 Project Highlights
+## 📊 Dashboard Preview
 
-- ✅ End-to-End Data Science Project
-- ✅ SQL Database Design & Business Analysis
+> **Interactive Tableau Dashboard**
+
+![Customer Churn Dashboard](tableau/Customer_Churn_Dashboard.png)
+
+---
+
+## 🎯 Project Objective
+
+The objective of this project is to:
+
+- Analyze customer behavior using SQL
+- Validate and clean business data
+- Discover churn patterns through EDA
+- Build predictive Machine Learning models
+- Compare multiple algorithms
+- Identify the most important churn drivers
+- Develop an interactive Tableau dashboard
+- Provide actionable business recommendations
+
+---
+
+## 🌟 Project Highlights
+
+- ✅ SQL Database Design
 - ✅ Data Validation & Quality Assessment
 - ✅ Python Data Cleaning Pipeline
-- ✅ Exploratory Data Analysis (EDA)
+- ✅ Exploratory Data Analysis
+- ✅ Feature Engineering
 - ✅ Machine Learning Model Development
 - ✅ Hyperparameter Tuning
+- ✅ XGBoost Classification
 - ✅ Feature Importance Analysis
-- ✅ Model Serialization using Pickle
-- ⏳ Tableau Dashboard
-- ⏳ Business Recommendations
+- ✅ Model Serialization
+- ✅ Tableau Dashboard
 
 ---
 
-# 🛠️ Tech Stack
+## 🛠 Tech Stack
 
-| Tool | Purpose |
-|------|---------|
-| MySQL | Database creation, SQL analysis & KPI reporting |
-| Python | Data cleaning, EDA & Machine Learning |
-| Jupyter Notebook | Data analysis & model development |
-| Pandas | Data manipulation |
-| NumPy | Numerical computation |
-| Matplotlib | Data visualization |
-| Seaborn | Statistical visualization |
+| Technology | Purpose |
+|------------|---------|
+| MySQL | Database & SQL Analysis |
+| Python | Data Processing |
+| Pandas | Data Manipulation |
+| NumPy | Numerical Computing |
+| Matplotlib | Data Visualization |
+| Seaborn | Statistical Visualization |
 | Scikit-learn | Machine Learning |
 | XGBoost | Gradient Boosting Classification |
 | Tableau | Interactive Dashboard |
+| Jupyter Notebook | Development Environment |
 | Pickle | Model Serialization |
 | Git & GitHub | Version Control |
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```text
 Customer-Churn-Prediction
 │
 ├── data
 │   ├── raw
-│   │   └── synthetic_customer_churn_100k.csv
-│   │
 │   └── processed
-│       └── customer_churn_cleaned.csv
 │
 ├── sql
-│   ├── 01_database_setup.sql
-│   ├── 02_data_validation.sql
-│   └── 03_business_analysis.sql
 │
 ├── notebooks
-│   ├── 01_Data_Cleaning.ipynb
-│   ├── 02_EDA.ipynb
-│   └── 03_Machine_Learning.ipynb
 │
 ├── models
-│   ├── customer_churn_model.pkl
-│   ├── scaler.pkl
-│   └── label_encoder.pkl
 │
 ├── reports
-│   ├── Day1_Business_Insights.md
-│   └── Day2_DataCleaning.md
 │
 ├── tableau
+│   ├── Customer_Churn_Dashboard.twbx
+│   └── Customer_Churn_Dashboard.png
 │
 ├── images
 │
@@ -95,7 +119,7 @@ Customer-Churn-Prediction
 
 ---
 
-# 📁 Dataset
+## 📁 Dataset
 
 | Metric | Value |
 |---------|------|
@@ -118,10 +142,10 @@ Customer-Churn-Prediction
 
 ---
 
-# 📊 Dataset Quality Summary
+## 📊 Dataset Quality Summary
 
 | Metric | Result |
-|---------|--------|
+|---------|---------|
 | Total Records | 100,000 |
 | Missing Values | 0 |
 | Duplicate Records | 0 |
@@ -131,9 +155,9 @@ Customer-Churn-Prediction
 
 ---
 
-# 📈 Exploratory Data Analysis
+## 📈 Exploratory Data Analysis
 
-EDA included:
+Performed:
 
 - Univariate Analysis
 - Bivariate Analysis
@@ -151,9 +175,9 @@ EDA included:
 
 ---
 
-# 🤖 Machine Learning
+## 🤖 Machine Learning
 
-## Data Preprocessing
+### Data Preprocessing
 
 - Removed CustomerID
 - One-Hot Encoding
@@ -161,7 +185,7 @@ EDA included:
 - Standard Scaling
 - Train-Test Split (80:20)
 
-## Models Evaluated
+### Models Evaluated
 
 - Logistic Regression
 - Decision Tree
@@ -169,25 +193,23 @@ EDA included:
 - XGBoost
 - Tuned XGBoost (GridSearchCV)
 
----
-
-## 📊 Model Performance
+### 📊 Model Performance
 
 | Model | Accuracy | ROC-AUC | F1 Score |
-|--------|----------|----------|----------|
-| Tuned XGBoost | **75.95%** | **0.802** | **0.605** |
+|--------|---------:|---------:|----------:|
+| **Tuned XGBoost** | **75.95%** | **0.802** | **0.605** |
 | XGBoost | 75.31% | 0.797 | 0.592 |
 | Random Forest | 73.43% | 0.789 | 0.554 |
 | Logistic Regression | 72.48% | 0.771 | 0.525 |
 | Decision Tree | 68.15% | 0.641 | 0.521 |
 
-### Final Model
+### 🏆 Final Model
 
-**Tuned XGBoost** was selected as the final model due to its superior performance across Accuracy, ROC-AUC, F1 Score, and Cross-Validation Accuracy.
+Tuned XGBoost was selected as the final model due to its superior performance across Accuracy, ROC-AUC, F1 Score, and Cross-Validation Accuracy.
 
 ---
 
-# 📈 Feature Importance
+## 📈 Feature Importance
 
 The trained XGBoost model identified the following features as the most influential:
 
@@ -200,7 +222,27 @@ These variables account for the majority of the model's predictive power, indica
 
 ---
 
-# 💾 Saved Models
+## 📊 Tableau Dashboard
+
+The interactive Tableau dashboard includes:
+
+- KPI Cards
+- Contract Type Analysis
+- Payment Method Analysis
+- Gender vs Churn
+- Monthly Charges Distribution
+- Customer Churn by Tenure Band
+- Feature Importance (XGBoost)
+
+Open the dashboard using:
+
+```text
+tableau/Customer_Churn_Dashboard.twbx
+```
+
+---
+
+## 💾 Saved Models
 
 The following artifacts are included for future deployment:
 
@@ -210,39 +252,45 @@ The following artifacts are included for future deployment:
 
 ---
 
-# 🚀 Project Roadmap
+## 🚀 Installation
 
-| Phase | Status |
-|--------|--------|
-| SQL Database & Business Analysis | ✅ Completed |
-| Data Cleaning & Validation | ✅ Completed |
-| Exploratory Data Analysis | ✅ Completed |
-| Feature Engineering | ✅ Completed |
-| Machine Learning | ✅ Completed |
-| Hyperparameter Tuning | ✅ Completed |
-| Tableau Dashboard | ⏳ In Progress |
-| Business Recommendations | ⏳ Pending |
+```bash
+git clone https://github.com/Nihiljohn75/Customer-Churn-Prediction.git
+
+cd Customer-Churn-Prediction
+
+pip install -r requirements.txt
+```
 
 ---
 
-# 📊 Current Status
+## ▶️ Run the Project
 
-| Phase | Status |
-|--------|--------|
-| Database Setup | ✅ Completed |
-| SQL Analysis | ✅ Completed |
-| Data Cleaning | ✅ Completed |
-| Exploratory Data Analysis | ✅ Completed |
-| Machine Learning | ✅ Completed |
-| Model Comparison | ✅ Completed |
-| Hyperparameter Tuning | ✅ Completed |
-| Feature Importance | ✅ Completed |
-| Model Serialization | ✅ Completed |
-| Tableau Dashboard | ⏳ In Progress |
+Run the notebooks in the following order:
+
+```text
+01_Data_Cleaning.ipynb
+
+↓
+
+02_EDA.ipynb
+
+↓
+
+03_Machine_Learning.ipynb
+```
+
+Then open:
+
+```text
+tableau/Customer_Churn_Dashboard.twbx
+```
+
+using Tableau Desktop or Tableau Public.
 
 ---
 
-# 📈 Business Insights
+## 📈 Business Insights
 
 - Approximately **33.14%** of customers have churned.
 - Customer tenure is the strongest predictor of churn.
@@ -252,7 +300,17 @@ The following artifacts are included for future deployment:
 
 ---
 
-# 📬 Author
+## 🔮 Future Improvements
+
+- Deploy the model using Streamlit
+- Build a Flask API
+- Connect Tableau to a live SQL database
+- Add SHAP explainability
+- Automate model retraining
+
+---
+
+## 👨‍💻 Author
 
 **Nihil John Sundar S**
 
@@ -266,8 +324,17 @@ The following artifacts are included for future deployment:
 
 ---
 
-# ⭐ Repository Status
+## ⭐ Repository Status
 
-This repository documents the complete lifecycle of an end-to-end Customer Churn Prediction project using **SQL, Python, Machine Learning, XGBoost, and Tableau**.
+This repository demonstrates an **industry-standard end-to-end Customer Churn Prediction project** covering:
 
-The project follows an industry-standard data science workflow and demonstrates database management, data preprocessing, exploratory analysis, predictive modeling, model evaluation, and business intelligence reporting.
+- SQL
+- Python
+- Exploratory Data Analysis
+- Machine Learning
+- Hyperparameter Tuning
+- XGBoost
+- Tableau
+- Business Intelligence
+
+It showcases the complete lifecycle of a real-world customer churn prediction workflow, from raw data to actionable business insights.
